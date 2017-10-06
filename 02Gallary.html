@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>ギャラリー</title>
+	<link rel="stylesheet" type="text/css" href="02Gallary.css">
+
+  <!-- effect.js/js -->
+  <link rel="stylesheet" href="animate.css">
+  <script src = "jquery_min.js"></script>
+  <script src = "scripts/wow.js"></script>
+  <script>
+      new WOW().init();
+      $(function () {
+        $("img.images").click(function () {
+
+          var _this = $(this);
+          var image = new Image();
+          image.src = _this.attr("src");
+
+          var width = image.width;
+          var height = image.height;
+          var showImgDiv = $("#showImgDiv");
+          var showImg = $("#showImg", showImgDiv);
+
+          showImg.attr("src", _this.attr("src"));
+          resizeImgPosition();
+          showImgDiv.show();
+
+          $("#showImgBG").show();
+        });
+
+        $("#showImg").click(function () {
+
+          var showImgDiv = $("#showImgDiv");
+
+          showImgDiv
+            .hide()
+            .find("img").attr("src", "");
+
+          $("#showImgBG").hide();
+        });
+      });
+
+      $(window).resize(function () {
+        if ($("#showImgDiv").is(":visible")) {
+          resizeImgPosition();
+        }
+      });
+
+      function resizeImgPosition () {
+
+          var showImg = $("#showImg");
+          var image = new Image();
+          image.src = showImg.attr("src");
+
+          var width = image.width;
+          var height = image.height;
+
+          var imgStyle = {};
+          
+          if (width < height) {
+            imgStyle = { 
+              width: 275, 
+              height: 400
+            };
+          } else {
+            imgStyle = {
+              width: 500,
+              height: 300
+            };
+          }
+
+          console.log("window width : " + window.screen.width);
+          console.log("window height : " + window.screen.height);
+          imgStyle.left= ($(window).width() / 2) - (imgStyle.width / 2);
+          imgStyle.top= ($(window).height() /2) - (imgStyle.height / 2);
+
+          showImg.css(imgStyle);
+      }
+  </script>
+</head>
+<body>
+
+
+
+  <div id="showImgDiv">
+    <img id="showImg" style="position: absolute; height: auto;"/>
+  </div>
+  <div id="showImgBG"></div>
+  <div id="design_G"></div> 
+  
+  <div class="title">
+    <a href="00Home.html"><h1> 埼玉の魅力を発掘する！</h1></a>
+  </div>
+  <!-- title -->
+  <div id="header">
+    <div class="menu">
+        <ul>
+          <!-- ここで逆順 -->
+          <li><a href="03About_Us.html">About us</a></li>
+          <li><a href="02Gallary.html">ギャラリー</a></li>
+          <li><a href="01Famous_Area.html">観光地</a></li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="wow fadeInRightBig" data-wow-duration="3s" data-wow-delay="0s">
+    <div id="BoxInclude" align="center">
+      <div id="BoxGallery">
+         <table>
+          <tr>
+            <td>
+            <img src="Image/023.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/024.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/025.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/026.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/048.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+          </tr>      
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0s">
+    <div id="BoxInclude" align="center">
+      <div id="BoxGallery">
+          <table>
+            <tr>
+              <td>
+              <img src="Image/028.png" class="images" width="100%" height="150px">
+              </a>
+              </td>
+              <td>
+              <img src="Image/029.png" class="images" width="100%" height="150px">
+              </a>
+              </td>
+              <td>
+              <img src="Image/030.png" class="images" width="100%" height="150px">
+              </a>
+              </td>
+              <td>
+              <img src="Image/031.png" class="images" width="100%" height="150px">
+              </a>
+              </td>
+              <td>
+              <img src="Image/032.png" class="images" width="100%" height="150px">
+              </a>
+              </td>
+            </tr>      
+          </table>
+        </div>
+      </div>
+    </div>
+
+  <div class="wow fadeInRightBig" data-wow-duration="3s" data-wow-delay="0s">
+    <div id="BoxInclude" align="center">
+      <div id="BoxGallery">
+        <table>
+          <tr>
+            <td>
+            <img src="Image/033.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/034.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/035.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/036.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/037.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+          </tr>      
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0s">
+    <div id="BoxInclude" align="center">
+      <div id="BoxGallery">
+        <table>
+          <tr>
+            <td>
+            <img src="Image/038.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/039.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/040.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/041.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/042.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+          </tr>      
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="wow fadeInRightBig" data-wow-duration="3s" data-wow-delay="0s">
+    <div id="BoxInclude" align="center">
+      <div id="BoxGallery">
+        <table>
+          <tr>
+            <td>
+            <img src="Image/043.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/044.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/045.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/046.png" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/000.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/006.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+          </tr>      
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0s">
+    <div id="BoxInclude" align="center">
+      <div id="BoxGallery">
+        <table>
+          <tr>
+            <td>
+            <img src="Image/001.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/002.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/003.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/004.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/005.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+          </tr>      
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0s">
+    <div id="BoxInclude" align="center">
+      <div id="BoxGallery">
+        <table>
+          <tr>
+            <td>
+            <img src="Image/012.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/008.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/009.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/010.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/011.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+          </tr>      
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0s">
+    <div id="BoxInclude" align="center">
+      <div id="BoxGallery">
+        <table>
+          <tr>
+            <td>
+            <img src="Image/013.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/014.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/015.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/016.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/017.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+          </tr>      
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0s">
+    <div id="BoxInclude" align="center">
+      <div id="BoxGallery">
+        <table>
+          <tr>
+            <td>
+            <img src="Image/018.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/019.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/020.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/021.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+            <td>
+            <img src="Image/022.jpg" class="images" width="100%" height="150px">
+            </a>
+            </td>
+          </tr>      
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <div id="corp">@2016~ ccmc 16r411 Corproation</div>
+</body>
+</html>

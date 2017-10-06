@@ -1,0 +1,181 @@
+body {
+	margin: 0;
+	
+}
+
+h1 {
+	font-size: 35px;
+	font-style: arial;
+	font-weight: bolder;
+	margin: 0 0 0 0;
+	top: 5px;
+	left: 60px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 1000px;
+}
+
+td {
+	color: #14418a;
+    text-align: auto;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+}
+
+th {
+	background-color: #14418a;
+	border-top: 3px solid #ddd;
+	border-bottom: 4px solid #ddd;
+	color: white;
+}
+
+#back_stage, #stage{
+	position: absolute;
+}
+
+#design_G {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	height: 10px;
+	width: 100%;
+	background-color: #14418a;
+	border-top: 3px #051152 solid;
+	border-bottom: 3px #051152 solid;
+}
+
+#header {
+	margin: 0px;
+	padding-top: 50px; 
+	height: 50px;
+}
+
+.title {
+	margin-top: 15px;
+	width: 600px;
+	float: left;
+}
+
+.title a {
+	color: black;
+	text-decoration: none;
+}
+.title a:visited { 
+	color: black;
+}
+.title a:active {
+	color: #050099;
+}
+
+.menu {
+	margin: 0 0 0 0; 
+	width: 100%;
+	position: absolute;
+}
+
+.menu li { 
+	margin-right: 5%;
+	float: right; 
+	font-size: 20px;
+	font-style: arial;
+	font-weight: bolder;
+	list-style: none;
+}
+.menu li a { 
+	color: black;
+	text-decoration: none;
+	opacity: 0.5;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+
+.menu li a:hover{
+		color: #050099;
+	opacity: 1.0;
+    transition: opacity .55s ease-in-out;
+    -moz-transition: opacity .55s ease-in-out;
+    -webkit-transition: opacity .55s ease-in-out;
+}
+#intro{
+	margin: 10px;
+	padding: 5px;
+	width: 97%;
+	height: auto;
+	font-style: oblique;
+	font-weight: bolder;
+	word-spacing: 10px;
+	text-align: left;
+	line-height: auto;
+}
+#corp {
+	margin-top: 30px;
+	margin-left: 3%;
+	margin-right: 3%;
+	width: 94%;
+	float: right;
+	border-top: 1px solid #ddd;
+	
+}
+
+#BoxInclude{
+	margin-right: 1%;
+	margin-left: 1%;
+	width: 98%;
+	height: auto;
+}
+
+#BoxGallery{
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 15px;
+	background-color: none;
+	width: 98%;
+	height: auto;
+	float: left;
+}
+
+img.images {
+	cursor: pointer;
+}
+
+#showImgDiv {
+	width: 100%;
+	line-height: 100%;
+	position: fixed;
+	z-index: 201;
+	display: none;
+}
+
+#showImgBG {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index: 200;
+	opacity: .5;
+	display: none;
+}
+
+
+
+@media only screen and (max-width: 530px), only screen and (max-device-width: 530px) {
+
+	h1{
+		font-size: 26px;
+	}
+
+	p{
+		font-size: 13px;
+	}
+
+	table{
+		width: 360px;
+	}
+
+	.menu li { 
+		font-size: 16px;
+	}
+
+}
